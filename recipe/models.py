@@ -1,14 +1,34 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
+
+# Choice Fields
+DISH_TYPES = (("Breakfast", "Breakfast"), ("Curries", "Curries"), ("Snacks", "Snacks"),
+              ("Drinks", "Drinks"))
+
+PREP_TIME = (
+    ("5 minutes", "5 min"),
+    ("10 minutes", "10 min"),
+    ("15 minutes", "15 min"),
+    ("20 minutes", "20 min"),
+    ("30 minutes", "30 min"),
+    ("45 minutes", "45 min"),
+    ("1 hour", "1 hour"),
+    ("1+ hour", "More than 1h"),
+)
+
+
 class Recipe(models.Model):
+    """
+    A model to create and manage recipes
+    Only the chef who created the recipe can edit or delete their own recipes  
+    """
     recipe_id = models.IntegerField()
-    title = models.CharField(max_length=200, unique=True)
-    description = models.SlugField(max_length=200, unique=True)
+    title = models.CharField(max_length=300, null=False, blank=False)
+    description = models.CharField(max_length=500, null=False, blank=False)
     chef = models.ForeignKey(User, on_delete=models.CASCADE, related_name="kitchen_recipes")
-    ingredients = models.TextField()
-    method = models.TextField()
-    dish_type = models.CharField(max_length=200)
-    prep_time = models.CharField(max_length=200)
+    ingredients = models.TextField(max_length=10000, null=False, blank=False)
+    method = models.TextField(max_length=10000, null=False, blank=False)
+    dish_type = models.CharField(max_length=50, choices=DISH_TYPES, default="breakfast")
+    prep_time = models.CharField(max_length=50, choices=PREP_TIME, default="15 minutes")
     posted_on = models.DateTimeField(auto_now_add=True)
