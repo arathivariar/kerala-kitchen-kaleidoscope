@@ -32,3 +32,9 @@ class Recipe(models.Model):
     dish_type = models.CharField(max_length=50, choices=DISH_TYPES, default="breakfast")
     prep_time = models.CharField(max_length=50, choices=PREP_TIME, default="15 minutes")
     posted_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-posted_on"]
+
+    def __str__(self):
+        return str(self.title)
