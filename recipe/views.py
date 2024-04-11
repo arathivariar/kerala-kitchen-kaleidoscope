@@ -9,24 +9,24 @@ class RecipeList(generic.ListView):
 
 
     def recipe_detail(request, description):
-    """
-    Display an individual :model:`recipe.Recipe`.
+        """
+        Display an individual :model:`recipe.Recipe`.
 
-    **Context**
+        **Context**
 
-    ``recipe``
-        An instance of :model:`recipe.Recipe`.
+        ``recipe``
+            An instance of :model:`recipe.Recipe`.
 
-    **Template:**
+        **Template:**
 
-    :template:`recipe/recipe_detail.html`
-    """
+        :template:`recipe/recipe_detail.html`
+        """
 
-    queryset = Recipe.objects.filter(dish_type="curries")
-    recipe = get_object_or_404(queryset, description=description)
+        queryset = Recipe.objects.filter(dish_type="curries")
+        recipe = get_object_or_404(queryset, description=description)
 
-    return render(
-        request,
-        "recipe/recipe_detail.html",
-        {"recipe": recipe},
-    )
+        return render(
+            request,
+            "recipe/recipe_detail.html",
+            {"recipe": recipe},
+        )
