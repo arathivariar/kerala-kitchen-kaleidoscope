@@ -24,9 +24,16 @@ class RecipeList(generic.ListView):
 
         queryset = Recipe.objects.filter(dish_type="curries")
         recipe = get_object_or_404(queryset, description=description)
+        comments = recipe.comments.all().order_by("-posted_on")
+        comment_count = recipe.comments.count()
 
         return render(
             request,
             "recipe/recipe_detail.html",
-            {"recipe": recipe},
+            {
+                "recipe": recipe,
+                "comments": comments,
+                "comment_count": comment_count,
+
+            },
         )

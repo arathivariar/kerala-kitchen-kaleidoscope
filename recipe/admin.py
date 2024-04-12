@@ -1,9 +1,12 @@
 from django.contrib import admin
-from .models import Recipe
+from .models import Recipe, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(Recipe)
+admin.site.register(Comment)
+
+
 class PostAdmin(SummernoteModelAdmin):
 
     list_display = ('title', 'description', 'dish_type')
