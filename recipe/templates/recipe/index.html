@@ -14,11 +14,16 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
+                                {% if "placeholder" in recipe.featured_image.url %}
+                                    <img class="card-img-top" src="{% static 'images/kerala_sadya.jpg' %}" alt="placeholder image">
+                                {% else %}
+                                    <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
+                                {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Chef: {{ recipe.chef }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'recipe_detail' recipe.description %}" class="post-link">
+                            <a href="{% url 'recipe_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
                                 <p class="card-text">{{ recipe.description }}</p>
                             </a>
