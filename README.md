@@ -1,6 +1,14 @@
-# Kerala Kitchen Kaleidoscope    
+# Kerala Kitchen Kaleidoscope  
 
-# Introduction    
+[Screenshot on variuous screens]    
+
+
+# Introduction  
+
+Kerala Kitchen Kaleidoscope is a website featuring recipes from Kerala. Kerala cuisine is a culinary style originated in Kerala, a state on the southwestern Malabar Coast of India. It offers a multitude of both vegetarian and non-vegetarian dishes. Kerala is known as the "Land of Spices" and we use chillies, curry leaves, coconut, mustard seeds, turmeric, tamarind, asafoetida and other spices in the preparation. Having been a major production area of spices for thousands of years, the region makes frequent use of black pepper, cardamom, clove, ginger, and cinnamon.
+Kerala Kitchen Kaleidoscope has been developed as part of the Code Institute's Full-Stack Developer course as my fourth project. It is focused on Django and Bootstrap frameworks, database manipulation and CRUD functionality. 
+I am born and brought up in Kerala and now living in Germany. I chose this topic for my project as I wanted the world to know about the rich flavours of Kerala cuisine.    
+
 
 # Table of Contents    
 
