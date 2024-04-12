@@ -4,7 +4,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(Recipe)
-admin.site.register(Comment)
+@admin.site.register(Comment)
 
 
 class PostAdmin(SummernoteModelAdmin):
