@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
-from .models import Recipe
+from .models import Recipe, Comment
 from .forms import CommentForm
 
 class RecipeList(generic.ListView):
@@ -31,12 +31,12 @@ class RecipeList(generic.ListView):
 
         if request.method == "POST":
             comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
-            comment.author = request.user
-            comment.post = post
-            comment.save()
-            messages.add_message(request, messages.SUCCESS,'Comment submitted and awaiting approval')
+            if comment_form.is_valid():
+                comment = comment_form.save(commit=False)
+                comment.author = request.user
+                comment.post = post
+                comment.save()
+                messages.add_message(request, messages.SUCCESS,'Comment submitted and awaiting approval')
             comment_form = CommentForm()
 
         return render(
