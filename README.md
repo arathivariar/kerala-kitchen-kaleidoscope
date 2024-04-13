@@ -14,7 +14,16 @@ I am born and brought up in Kerala and now living in Germany. I chose this topic
 
 # Overview    
 
-# UX - User Experience    
+# UX - User Experience  
+
++ Colour scheme and theme    
+
+The logo of the website is an image icon of Kerala Sadya. While creating the theme of the website, I began by creating an illustration of a banana leaf spread out like a placemat. Then I added various elements of Kerala Sadya dishes onto the banana leaf, such as rice, curries like avial, olan, then pappadam, banana chips, etc. I wanted to bring in the authenticity of Kerala cuisine and the flavours which make it unique.    
+
+I have used vibrant colours commonly found in Kerala cuisine, such as green, yellow, red, and earthy tones.    
+
++ Fonts    
+
 
 # Project Planning    
 
