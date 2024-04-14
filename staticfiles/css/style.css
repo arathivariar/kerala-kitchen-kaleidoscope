@@ -10,6 +10,11 @@ body {
     color: #008000;
 }
 
+.logo {
+    height: 50%;
+    width: 50%;
+}
+
 .green-o {
     color: #32CD32;
 }
