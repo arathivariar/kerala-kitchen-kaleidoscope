@@ -10,42 +10,42 @@ class RecipeList(generic.ListView):
     paginate_by = 6
 
 
-    def recipe_detail(request, description):
-        """
-        Display an individual :model:`recipe.Recipe`.
+def recipe_detail(request, recipe_id):
+    """
+    Display an individual :model:`recipe.Recipe`.
 
-        **Context**
+    **Context**
 
-        ``recipe``
-            An instance of :model:`recipe.Recipe`.
+    ``recipe``
+        An instance of :model:`recipe.Recipe`.
 
-        **Template:**
+    **Template:**
 
-        :template:`recipe/recipe_detail.html`
-        """
+    :template:`recipe/recipe_detail.html`
+    """
 
-        queryset = Recipe.objects.filter(dish_type="curries")
-        recipe = get_object_or_404(queryset, description=description)
-        comments = recipe.comments.all().order_by("-posted_on")
-        comment_count = recipe.comments.count()
+    queryset = Recipe.objects.filter(dish_type="curries")
+    recipe = get_object_or_404(queryset, recipe_id=recipe_id)
+    comments = recipe.comments.all().order_by("-posted_on")
+    comment_count = recipe.comments.count()
 
-        if request.method == "POST":
-            comment_form = CommentForm(data=request.POST)
-            if comment_form.is_valid():
-                comment = comment_form.save(commit=False)
-                comment.author = request.user
-                comment.post = post
-                comment.save()
-                messages.add_message(request, messages.SUCCESS,'Comment submitted and awaiting approval')
-            comment_form = CommentForm()
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.post = post
+            comment.save()
+            messages.add_message(request, messages.SUCCESS,'Comment submitted and awaiting approval')
+        comment_form = CommentForm()
 
-        return render(
-            request,
-            "recipe/recipe_detail.html",
-            {
-                "recipe": recipe,
-                "comments": comments,
-                "comment_count": comment_count,
-                "comment_form": comment_form,
-            },
-        )
+    return render(
+        request,
+        "recipe/recipe_detail.html",
+        {
+            "recipe": recipe,
+            "comments": comments,
+            "comment_count": comment_count,
+            "comment_form": comment_form,
+        },
+    )
