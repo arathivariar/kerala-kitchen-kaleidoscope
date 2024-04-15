@@ -23,7 +23,7 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #2AAA8A;
 }
 
 .main-bg {
@@ -44,7 +44,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
+    background-color: #98FB98;
 }
 
 .scale {
@@ -99,7 +99,7 @@ body {
 
 .recipe-link:hover,
 .page-link {
-    color: #E84610;
+    color: #228B22;
 }
 
 .recipe-title {
