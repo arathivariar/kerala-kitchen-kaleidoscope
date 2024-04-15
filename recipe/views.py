@@ -24,7 +24,7 @@ def recipe_detail(request, recipe_id):
     :template:`recipe/recipe_detail.html`
     """
 
-    queryset = Recipe.objects.filter(dish_type="curries")
+    queryset = Recipe.objects.all()
     recipe = get_object_or_404(queryset, recipe_id=recipe_id)
     comments = recipe.comments.all().order_by("-posted_on")
     comment_count = recipe.comments.count()
