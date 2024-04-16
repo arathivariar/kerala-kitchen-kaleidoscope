@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from .models import Recipe, Comment
 from .forms import CommentForm
 
@@ -34,7 +35,7 @@ def recipe_detail(request, recipe_id):
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.author = request.user
-            comment.post = post
+            comment.recipe = recipe
             comment.save()
             messages.add_message(request, messages.SUCCESS,'Comment submitted and awaiting approval')
     
@@ -50,3 +51,61 @@ def recipe_detail(request, recipe_id):
             "comment_form": comment_form,
         },
     )
+
+
+def comment_edit(request, recipe_id, comment_id):
+    """
+    Display an individual comment for edit.
+
+    **Context**
+
+    ``recipe``
+        An instance of :model:`recipe.Recipe`.
+    ``comment``
+        A single comment related to the post.
+    ``comment_form``
+        An instance of :form:`recipe.CommentForm`
+    """
+    if request.method == "POST":
+
+        queryset = Post.objects.all()
+        post = get_object_or_404(queryset, recipe_id=recipe_id)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.recipe = recipe
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('recipe_detail', args=[recipe_id]))
+
+
+def comment_delete(request, recipe_id, comment_id):
+    """
+    Delete an individual comment.
+
+    **Context**
+
+    ``recipe``
+        An instance of :model:`blog.Post`.
+    ``comment``
+        A single comment related to the post.
+    """
+    queryset = Post.objects.all()
+    post = get_object_or_404(queryset, recipe_id=recipe_id)
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+    else:
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own comments!')
+
+    return HttpResponseRedirect(reverse('recipe_detail', args=[recipe_id]))
