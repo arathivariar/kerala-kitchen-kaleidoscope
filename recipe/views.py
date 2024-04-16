@@ -37,7 +37,8 @@ def recipe_detail(request, recipe_id):
             comment.post = post
             comment.save()
             messages.add_message(request, messages.SUCCESS,'Comment submitted and awaiting approval')
-        comment_form = CommentForm()
+    
+    comment_form = CommentForm()
 
     return render(
         request,
