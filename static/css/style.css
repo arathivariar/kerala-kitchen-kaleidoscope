@@ -112,6 +112,11 @@ body {
     color: lightgray;
 }
 
+.food-icon {
+    height: 2rem;
+    margin: 1rem;
+}
+
 .btn-signup,
 .btn-edit {
     background-color: #188181;

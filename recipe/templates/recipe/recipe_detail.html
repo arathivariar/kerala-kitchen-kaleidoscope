@@ -29,14 +29,25 @@
             <!-- The recipe content goes inside the card-text. -->
             <!-- Use the | safe filter inside the template tags -->
             <p class="card-text">
-               {{ recipe.dish_type | safe }}
-               {{ recipe.prep_time | safe }}
-               {{ recipe.ingredients | safe }}
-               {{ recipe.method | safe }}
+               <img src="{% static 'images/dish_type_icon.svg' %}" alt="dish type" class="food-icon"/>
+               <span class="card-text">Dish Type:</span> {{ recipe.dish_type | safe }}
             </p>
+            <p class="card-text">
+               <img src="{% static 'images/prep_time_icon.svg' %}" alt="prep time" class="food-icon"/>
+               <span class="card-text">Prep Time:</span> {{ recipe.prep_time | safe }}
+            </p>
+            <div class="card-text">
+               <h2>Ingredients</h2>
+               <p>{{ recipe.ingredients|safe }}</p>
+            </div>
+            <div class="card-text">
+               <h2>Method</h2>
+               <p>{{ recipe.method|safe }}</p>
+            </div>
          </div>
       </div>
    </div>
+</div>
    <!-- Displaying count of comments -->
    <div class="row">
       <div class="col-12">
