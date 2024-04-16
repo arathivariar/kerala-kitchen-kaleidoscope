@@ -11,7 +11,7 @@ class PostAdmin(SummernoteModelAdmin):
     field filters, fields to prepopulate and rich-text editor.
     """
 
-    list_display = ('title', 'description', 'dish_type')
+    list_display = ('recipe_id', 'title', 'description', 'dish_type')
     search_fields = ['title', 'ingredients']
     list_filter = ('dish_type','posted_on',)
     prepopulated_fields = {'description': ('title',)}
