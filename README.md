@@ -20,10 +20,11 @@ I am born and brought up in Kerala and now living in Germany. I chose this topic
 
 The logo of the website is an image icon of Kerala Sadya. While creating the theme of the website, I began by creating an illustration of a banana leaf spread out like a placemat. Then I added various elements of Kerala Sadya dishes onto the banana leaf, such as rice, curries like avial, olan, then pappadam, banana chips, etc. I wanted to bring in the authenticity of Kerala cuisine and the flavours which make it unique.    
 
-I have used vibrant colours commonly found in Kerala cuisine, such as green, yellow, red, and earthy tones.    
+I have used vibrant colours commonly found in Kerala cuisine, such as green, yellow, and earthy tones.    
 
-+ Fonts    
++ Fonts   
 
+I have used "Lato" and "Roboto" fonts from the Google Fonts library as it was giving a nice look for the text content displayed.    
 
 # Project Planning    
 
@@ -57,15 +58,21 @@ I followed the MoSCoW Prioritization method for Kerala Kitchen Kaleidoscope by i
 
 # Future Features    
 
++ Create user profiles and add CRUD functionalities to the user profiles.
++ The users can add their own recipes on the website and share it in social media.
++ The user can find a recipe when they search with the ingredients of the recipe.
++ Add more traditional and authentic recipes from the Kerala cuisine.    
+
+
 # Technologies & Languages Used    
 
 + HTML    
 + CSS    
 + JavaScript    
 + Python    
-+ Git(include link) used for version control.    
-+ Github (include link) used for online storage of codebase and Projects tool.
-+ Gitpod (include link) as an online, cloud-based IDE for development.    
++ [Git](https://git-scm.com) used for version control.    
++ [Github](https://github.com) used for online storage of codebase and Projects tool.
++ [Gitpod](https://gitpod.io) as an online, cloud-based IDE for development.    
 + Django was used as the Python framework for the site.    
 + Cloudinary was used for cloud media storage of user uploaded images.    
 + ElephantSQL was used to host the PostgreSQL database needed to collect and recall the users data.    
