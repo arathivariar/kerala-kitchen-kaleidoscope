@@ -16,22 +16,22 @@ def suggestions(request):
     ``suggestions``
         The most recent instance of :model:`suggestions.Suggestions`.
         ``suggestion_form``
-            An instance of :form:`suggestions.SuggestionForm`.
+            An instance of :form:`suggestions.SuggestionsForm`.
 
     **Template**
     :template:`suggestions/suggestions.html`
     """
 
     if request.method == "POST":
-        suggestion_form = SuggestionForm(data=request.POST)
+        suggestion_form = SuggestionsForm(data=request.POST)
         if suggestion_form.is_valid():
             suggestion_form.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Suggestion request received!'
+                'Suggestion received!'
             )
     suggestion = Suggestions.objects.all()
-    suggestion_form = SuggestionForm()
+    suggestion_form = SuggestionsForm()
 
     return render(
         request,

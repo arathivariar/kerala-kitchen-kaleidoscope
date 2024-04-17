@@ -1,5 +1,5 @@
 from django import forms
-from .models import SuggestionsForm
+from .models import Suggestions
 
 
 class SuggestionsForm(forms.ModelForm):
@@ -10,5 +10,5 @@ class SuggestionsForm(forms.ModelForm):
         """
         Specify the django model and order of the fields
         """
-        model = SuggestionRequest
+        model = Suggestions
         fields = ('name', 'email', 'message')
