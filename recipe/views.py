@@ -53,6 +53,7 @@ def recipe_detail(request, recipe_id):
     )
 
 
+@login_required
 def comment_edit(request, recipe_id, comment_id):
     """
     Display an individual comment for edit.
@@ -86,6 +87,7 @@ def comment_edit(request, recipe_id, comment_id):
     return HttpResponseRedirect(reverse('recipe_detail', args=[recipe_id]))
 
 
+@login_required
 def comment_delete(request, recipe_id, comment_id):
     """
     Delete an individual comment.
