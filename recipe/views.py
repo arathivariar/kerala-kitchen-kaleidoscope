@@ -64,14 +64,14 @@ def comment_edit(request, recipe_id, comment_id):
     ``recipe``
         An instance of :model:`recipe.Recipe`.
     ``comment``
-        A single comment related to the post.
+        A single comment related to the recipe.
     ``comment_form``
         An instance of :form:`recipe.CommentForm`
     """
     if request.method == "POST":
 
-        queryset = Post.objects.all()
-        post = get_object_or_404(queryset, recipe_id=recipe_id)
+        queryset = Recipe.objects.all()
+        recipe = get_object_or_404(queryset, recipe_id=recipe_id)
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
@@ -96,12 +96,12 @@ def comment_delete(request, recipe_id, comment_id):
     **Context**
 
     ``recipe``
-        An instance of :model:`blog.Post`.
+        An instance of :model:`recipe.Recipe`.
     ``comment``
-        A single comment related to the post.
+        A single comment related to the recipe.
     """
-    queryset = Post.objects.all()
-    post = get_object_or_404(queryset, recipe_id=recipe_id)
+    queryset = Recipe.objects.all()
+    recipe = get_object_or_404(queryset, recipe_id=recipe_id)
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.author == request.user:
