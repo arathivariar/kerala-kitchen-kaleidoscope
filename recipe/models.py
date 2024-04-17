@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 # Choice Fields
@@ -27,6 +28,7 @@ class Recipe(models.Model):
     title = models.CharField(max_length=300, null=False, blank=False)
     description = models.CharField(max_length=500, null=False, blank=False)
     chef = models.ForeignKey(User, on_delete=models.CASCADE, related_name="kitchen_recipes")
+    featured_image = CloudinaryField('image', default='placeholder')
     ingredients = models.TextField(max_length=10000, null=False, blank=False)
     method = models.TextField(max_length=10000, null=False, blank=False)
     dish_type = models.CharField(max_length=50, choices=DISH_TYPES, default="breakfast")
