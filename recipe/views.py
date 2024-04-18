@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Recipe, Comment
 from .forms import CommentForm
 
+
 class RecipeList(generic.ListView):
     queryset = Recipe.objects.all()
     template_name = "recipe/index.html"
@@ -38,8 +39,10 @@ def recipe_detail(request, recipe_id):
             comment.author = request.user
             comment.recipe = recipe
             comment.save()
-            messages.add_message(request, messages.SUCCESS,'Comment submitted and awaiting approval')
-    
+            messages.add_message(
+                request, messages.SUCCESS, "Comment submitted and awaiting approval"
+            )
+
     comment_form = CommentForm()
 
     return render(
@@ -80,12 +83,11 @@ def comment_edit(request, recipe_id, comment_id):
             comment.recipe = recipe
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+            messages.add_message(request, messages.SUCCESS, "Comment Updated!")
         else:
-            messages.add_message(request, messages.ERROR,
-                                 'Error updating comment!')
+            messages.add_message(request, messages.ERROR, "Error updating comment!")
 
-    return HttpResponseRedirect(reverse('recipe_detail', args=[recipe_id]))
+    return HttpResponseRedirect(reverse("recipe_detail", args=[recipe_id]))
 
 
 @login_required
@@ -106,9 +108,10 @@ def comment_delete(request, recipe_id, comment_id):
 
     if comment.author == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+        messages.add_message(request, messages.SUCCESS, "Comment deleted!")
     else:
-        messages.add_message(request, messages.ERROR,
-                             'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, "You can only delete your own comments!"
+        )
 
-    return HttpResponseRedirect(reverse('recipe_detail', args=[recipe_id]))
+    return HttpResponseRedirect(reverse("recipe_detail", args=[recipe_id]))

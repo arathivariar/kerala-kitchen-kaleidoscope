@@ -1,1 +1,0 @@
-console.log("Recipes from Kerala, God's own country!");

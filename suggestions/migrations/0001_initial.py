@@ -7,27 +7,42 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='SuggestionRequest',
+            name="SuggestionRequest",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200)),
-                ('email', models.EmailField(max_length=254)),
-                ('message', models.TextField()),
-                ('read', models.BooleanField(default=False)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=200)),
+                ("email", models.EmailField(max_length=254)),
+                ("message", models.TextField()),
+                ("read", models.BooleanField(default=False)),
             ],
         ),
         migrations.CreateModel(
-            name='Suggestions',
+            name="Suggestions",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200)),
-                ('email', models.EmailField(max_length=200)),
-                ('message', models.TextField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=200)),
+                ("email", models.EmailField(max_length=200)),
+                ("message", models.TextField()),
             ],
         ),
     ]

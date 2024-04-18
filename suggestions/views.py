@@ -26,16 +26,12 @@ def suggestions(request):
         suggestion_form = SuggestionsForm(data=request.POST)
         if suggestion_form.is_valid():
             suggestion_form.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Suggestion received!'
-            )
+            messages.add_message(request, messages.SUCCESS, "Suggestion received!")
     suggestion = Suggestions.objects.all()
     suggestion_form = SuggestionsForm()
 
     return render(
         request,
         "suggestions/suggestions.html",
-        {"suggestions": suggestions,
-         "suggestion_form": suggestion_form},
+        {"suggestions": suggestions, "suggestion_form": suggestion_form},
     )

@@ -8,6 +8,7 @@ class Suggestions(models.Model):
     """
     Stores a suggestion
     """
+
     name = models.CharField(max_length=200)
     email = models.EmailField(max_length=200)
     message = models.TextField()
@@ -20,6 +21,7 @@ class SuggestionRequest(models.Model):
     """
     Stores a single suggestion request message
     """
+
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()
