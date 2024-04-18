@@ -53,12 +53,10 @@ I used Balsamiq Wireframes (desktop app) to create the wireframe designs for Ker
 I used [Draw SQL](https://drawsql.app/) to create Entity Relationship Diagram for Kerla Kitchen Kaleidoscope.    
 
 
-![Entity Relationship Diagram](static/documentation/schema/erd.png)
+![Entity Relationship Diagram](static/documentation/schema/erd.png)    
 
 
 
-
-# Project Planning    
 
 # Project Management- Agile Methodologies   
 
@@ -80,7 +78,52 @@ I followed the MoSCoW Prioritization method for Kerala Kitchen Kaleidoscope by i
 
 # User Stories   
    
-# Features    
+# Features   
+
++ **Home**   
+
+The home page contains a header with logo and navigation menu, a body with recipe cards (6 recipes per page), Next and Previous buttons for pagination, a footer with Copyright information and social media links etc.     
+
+
+![Home](static/documentation/screenshots/home.png)    
+
++ **Recipe Detail**
+
+The recipe detail page shows a selected recipe in detail. It contains recipe title, description, chef, dish type, prep time, ingredients, method, option to add comments etc.    
+
+
+![Recipe Detail](static/documentation/screenshots/recipe_detail.png)
+
++ **User Registration**
+
+The user registration page has a registration form where the user can sign up for the website by entering his/her personal details.
+
+![User Registration](static/documentation/screenshots/user_registration.png)     
+
++ **User Login**    
+
+The user login page can be used by registered users to login using their username and password.
+
+![User Login](static/documentation/screenshots/user_login.png)     
+
++ **User Logout**     
+
+When the logged in user tries to log out, a confirmation message is displayed as follows:
+
+![User Logout](static/documentation/screenshots/user_logout.png)     
+
++ **Comments**    
+
+The logged in user can add comments to a particular recipe. The comment author can also edit or delete the previously added comments.     
+
+![Comments](static/documentation/screenshots/comments.png)     
+
++ **Suggestions**
+
+The user can submit suggestions to the website. Suggestion form has name, email and message fields and a submit button.    
+
+![Suggestions](static/documentation/screenshots/suggestions.png)    
+
 
 # CRUD Functionality    
 
