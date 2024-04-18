@@ -22,6 +22,9 @@ I am born and brought up in Kerala and now living in Germany. I chose this topic
 
 # Overview    
 
+Kerala Kitchen Kaleidoscope is a recipe app for Kerala cuisine. It is accessible via all browsers with full responsiveness on different screen sizes. Kerala Kitchen Kaleidoscope aims to share the authentic dishes from traditional Kerala cuisine with the world. I have currently implemented a first version of this app but in future development of this project, I hope to include more features for the users.    
+
+
 # UX - User Experience  
 
 + **Colour scheme and theme**    
@@ -45,7 +48,7 @@ I used Balsamiq Wireframes (desktop app) to create the wireframe designs for Ker
 
 ![Wireframe Design_Recipe](static/documentation/wireframes/recipe.png)    
 
-+ **Entity Relationship Diagram**    
++ **Database Schema - Entity Relationship Diagram**    
 
 ![Entity Relationship Diagram](static/documentation/schema/erd.png)
 
@@ -73,11 +76,7 @@ I followed the MoSCoW Prioritization method for Kerala Kitchen Kaleidoscope by i
 
 
 # User Stories   
-
-# Wireframes    
-
-# Database Schema - Entity Relationship Diagram    
-
+   
 # Features    
 
 # CRUD Functionality    

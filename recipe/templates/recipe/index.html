@@ -15,9 +15,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in recipe.featured_image.url %}
-                                    <img class="card-img-top" src="{% static 'images/kerala_sadya.jpg' %}" alt="placeholder image">
+                                    <img class="card-img-top scale" src="{% static 'images/kerala_sadya.jpg' %}" alt="placeholder image">
                                 {% else %}
-                                    <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
+                                    <img class="card-img-top scale" src=" {{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Chef: {{ recipe.chef }}</p>
