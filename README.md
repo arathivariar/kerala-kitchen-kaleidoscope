@@ -50,6 +50,9 @@ I used Balsamiq Wireframes (desktop app) to create the wireframe designs for Ker
 
 + **Database Schema - Entity Relationship Diagram**    
 
+I used [Draw SQL](https://drawsql.app/) to create Entity Relationship Diagram for Kerla Kitchen Kaleidoscope.    
+
+
 ![Entity Relationship Diagram](static/documentation/schema/erd.png)
 
 
@@ -113,7 +116,9 @@ I followed the MoSCoW Prioritization method for Kerala Kitchen Kaleidoscope by i
 + Django Crispy Forms v2.0
 + Crispy Bootstrap5 v0.7
 + Django RichTextField v1.6.1
-+ Django Summernote v0.8.2    
++ Django Summernote v0.8.2  
++ Black 24.4.0    
+
 
 Further information is available in the requirements.txt file    
 
