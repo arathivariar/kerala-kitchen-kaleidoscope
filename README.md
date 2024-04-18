@@ -101,6 +101,13 @@ I followed the MoSCoW Prioritization method for Kerala Kitchen Kaleidoscope by i
 
 
 # User Stories   
+
+All the user stories have been added to the Project Board with the required fields like title, description, acceptance criteria, tasks, labels, project, milestone etc. The user stories were moved across the board through stages like To Do, In Progress and Done during the development of the project. Please find below screenshots for the user story board and issues:     
+
+![User Story Board](static/documentation/screenshots/user_story_board.png)      
+
+![Issues](static/documentation/screenshots/issues.png)      
+
    
 # Features   
 
