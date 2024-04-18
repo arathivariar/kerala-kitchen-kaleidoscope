@@ -18,7 +18,31 @@ Kerala Kitchen Kaleidoscope has been developed as part of the Code Institute's F
 I am born and brought up in Kerala and now living in Germany. I chose this topic for my project as I wanted the world to know about the rich flavours of Kerala cuisine.    
 
 
-# Table of Contents    
+# Table of Contents  
+
+- [Kerala Kitchen Kaleidoscope](#kerala-kitchen-kaleidoscope)
+- [Introduction](#introduction)
+- [Table of Contents](#table-of-contents)
+- [Overview](#overview)
+- [UX - User Experience](#ux-user-experience)
+     -    [Colour scheme and theme](#colour-scheme-and-theme)  
+     -    [Fonts](#fonts)  
+- [Design](#design)
+     -    [Wireframes](#wireframes)  
+     -    [Database Schema - Entity Relationship Diagram](#database-schema-entity-relationship-diagram)  
+- [Project Management- Agile Methodologies](#project-management-agile-methodologies)
+- [MoSCoW Prioritization](#moscow-prioritization)
+- [User Stories](#user-stories)
+- [Features](#features)
+- [CRUD Functionality](#crud-functionalities)
+- [Future Features](#future-features)
+- [Technologies & Languages Used](#technologies-&-languages-used)
+- [Libraries & Frameworks](libraries-&-frameworks)
+- [Testing](#testing)   
+     -    [Validator Testing](#validator-testing)  
+     -    [Manual Testing](#manual-testing)  
+- [Deployment](#deployment)
+- [Credits for Content and Media](#credits)
 
 # Overview    
 
@@ -127,6 +151,12 @@ The user can submit suggestions to the website. Suggestion form has name, email 
 
 # CRUD Functionality    
 
+Users are able to perform Create, Read, Update and Delete operations in this website. The CRUD functionalities are implemented for Comments model and it is restricted to authorized (logged in) users only.    
+
+A registered user can login using his/her credentials. The logged in user can Create a new comment, Read an existing comment, Update an existing comment and Delete a previously added comment.    
+
+
+
 # Future Features    
 
 + Create user profiles and add CRUD functionalities to the user profiles.
@@ -165,8 +195,6 @@ The user can submit suggestions to the website. Suggestion form has name, email 
 
 Further information is available in the requirements.txt file    
 
-
-# Tools & Programs    
 
 # Testing   
 
@@ -346,7 +374,9 @@ A copy of the original repository can be made through GitHub. Please follow the 
 + "I Think Therefore I Blog" project : I used this walkthrough project as my reference while developing my project.
 + My Mentor Martina for her guidance and the Slack Community for their support.
 + Website screenshot across devices: [Am I Responsive?](https://ui.dev/amiresponsive)
-+ Images:
++ Images: I have used images from various sources as it was difficult to find images of authentic Kerala recipes in one place. There are total 18 recipes and each recipe's image is taken from a different source. Some of them are from image sharing websites like [Shutterstock](https://www.shutterstock.com/) while some are taken from websites of food bloggers like [Dassana's](https://www.shutterstock.com/) and various other recipe blogs. I acknowledge due credit to all the images gotten via Google image search used in this website.   
+
+
 
 
 
