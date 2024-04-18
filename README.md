@@ -16,15 +16,33 @@ I am born and brought up in Kerala and now living in Germany. I chose this topic
 
 # UX - User Experience  
 
-+ Colour scheme and theme    
++ **Colour scheme and theme**    
 
 The logo of the website is an image icon of Kerala Sadya. While creating the theme of the website, I began by creating an illustration of a banana leaf spread out like a placemat. Then I added various elements of Kerala Sadya dishes onto the banana leaf, such as rice, curries like avial, olan, then pappadam, banana chips, etc. I wanted to bring in the authenticity of Kerala cuisine and the flavours which make it unique.    
 
-I have used vibrant colours commonly found in Kerala cuisine, such as green, yellow, and earthy tones.    
+I have used vibrant colours commonly found in Kerala cuisine, such as green, yellow, and earthy tones. I used [Canva](https://www.canva.com/) for selecting the colour theme.   
 
-+ Fonts   
++ **Fonts**   
 
-I have used "Lato" and "Roboto" fonts from the Google Fonts library as it was giving a nice look for the text content displayed.    
+I have used "Lato" and "Roboto" fonts from the [Google Fonts](https://fonts.google.com/) library as it was giving a nice look for the text content displayed.    
+
+# Design    
+
++ **Wireframes**    
+
+I used Balsamiq Wireframes (desktop app) to create the wireframe designs for Kerla Kitchen Kaleidoscope.
+
+![Wireframe Design_Home](static/documentation/wireframes/home.png)     
+
+
+![Wireframe Design_Recipe](static/documentation/wireframes/recipe.png)    
+
++ **Entity Relationship Diagram**    
+
+![Entity Relationship Diagram](static/documentation/schema/erd.png)
+
+
+
 
 # Project Planning    
 
@@ -229,7 +247,12 @@ A copy of the original repository can be made through GitHub. Please follow the 
 4. You should now have access to a forked copy of this repository in your Github account.
 5. Follow the above Django Project Steps if you wish to work on the project.
 
-# Credits    
+# Credits for Content and Media     
+
++ "I Think Therefore I Blog" project : I used this walkthrough project as my reference while developing my project.
++ My Mentor Martina for her guidance and the Slack Community for their support.
++ Website screenshot across devices: [Am I Responsive?](https://ui.dev/amiresponsive)
++ Images:
 
 
 
