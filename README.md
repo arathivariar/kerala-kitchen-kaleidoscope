@@ -1,6 +1,14 @@
-# Kerala Kitchen Kaleidoscope  
+# Kerala Kitchen Kaleidoscope     
 
-[Screenshot on variuous screens]    
+Kerala Kitchen Kaleidoscope is a recipe website based on Kerala cuisine. Kerala is a state in southern India. It is called the God's own country and has a flavourful cuisine which is authentic and traditional.    
+
+
+![Website view across device screens](static/documentation/screenshots/website_responsive_screens.png)       
+
+The live website can be accessed here: [Kerala Kitchen Kaleidoscope](https://kerala-kitchen-kaleidoscope-262eabb58b87.herokuapp.com/)
+
+For Admin access (for authorized users only): [Admin Panel](https://kerala-kitchen-kaleidoscope-262eabb58b87.herokuapp.com/admin/login/?next=/admin/)    
+
 
 
 # Introduction  
@@ -79,6 +87,7 @@ I followed the MoSCoW Prioritization method for Kerala Kitchen Kaleidoscope by i
 + Create user profiles and add CRUD functionalities to the user profiles.
 + The users can add their own recipes on the website and share it in social media.
 + The user can find a recipe when they search with the ingredients of the recipe.
++ The user can rate a recipe on a scale of 5 starts if he/she likes it.
 + Add more traditional and authentic recipes from the Kerala cuisine.    
 
 
