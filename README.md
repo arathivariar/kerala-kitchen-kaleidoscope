@@ -208,6 +208,15 @@ Further information is available in the requirements.txt file
 Testing of the website was done on various devices like mobile phones, tablet, laptop, and desktop. I have verified that the navigation to all the pages, all the features and all the links etc. are working as expected.
 I have tested the website on both Google Chrome (used for the development) and Microsoft Edge to ensure that the website worked on different browsers.
 
+
+| Epic         | User Stories                                                          | Expected Results                                                                   | Actual Results    |
+|--------------|-----------------------------------------------------------------------|------------------------------------------------------------------------------------|-------------------|
+| User Profile | User Registration, User Login, User Logout, User Navigation, Feedback | User is able to register, log in, log out, navigate and receive feedback           | Works as expected |
+| User Action  | Edit Comment, Delete Comment, Suggestions Form                        | Logged in user can edit/delete a comment and submit suggestions form               | Works as expected |
+| Recipes      | View Recipe, Comment on a Recipe                                      | User can browse through and view all the recipes and comment on particular recipes | Works as expected |    
+
+
+
 + **Validator Testing**     
 
 **HTML:**    
