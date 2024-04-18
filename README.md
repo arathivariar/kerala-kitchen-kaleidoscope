@@ -125,9 +125,47 @@ Further information is available in the requirements.txt file
 
 # Tools & Programs    
 
-# Testing    
+# Testing   
 
-For all testing, please refer to the TESTING.md file.    
+Testing of the website was done on various devices like mobile phones, tablet, laptop, and desktop. I have verified that the navigation to all the pages, all the features and all the links etc. are working as expected.
+I have tested the website on both Google Chrome (used for the development) and Microsoft Edge to ensure that the website worked on different browsers.
+
++ **Validator Testing**     
+
+**HTML:**    
+
+No errors were returned when passing through the official W3C validator.    
+
+![HTML Validation](static/documentation/validations/html_validation.png)     
+
+**CSS:**    
+
+No errors were found when passing through the official (Jigsaw) validator.    
+
+![CSS Validation](static/documentation/validations/css_validation.png)     
+
+**JS Hint:**    
+
+No errors were found when passing through the JS Hint validator.     
+
+![JS Hint](static/documentation/validations/jshint_validation.png)     
+
+**Python:**    
+
+I have used [Black](https://pypi.org/project/black/) Python code formatter for formatting Python code without any errors.    
+
+
+**Lighthouse (Accessibility Audit):**    
+
+The page achieved a good accessibility performance in Lighthouse as shown below:   
+
+![Lighthouse](static/documentation/validations/lighthouse.png)
+
++ **Manual Testing**
+
+I have tested all the user stories and they have all met their specific acceptance criteria. Please find below a tabular representation of testing results:
+
+
 
 # Deployment   
 
